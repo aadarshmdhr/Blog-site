@@ -20,7 +20,10 @@ def post_detail(request, pk):
         {"post": post},
     )
 
+from django.contrib.auth.decorators import login_required
 
+
+@login_required
 def draft_list(request):
     posts = Post.objects.filter(published_at__isnull=True)
     return render(
