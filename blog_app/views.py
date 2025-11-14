@@ -4,12 +4,11 @@ from blog_app.forms import PostForm
 from blog_app.models import Post
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
-
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, View
 
 # function based views
 # class based views
 
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, View
 
 class PostListView(ListView):
     model = Post
